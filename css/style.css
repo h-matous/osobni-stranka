@@ -1,0 +1,77 @@
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.obsah {
+  padding: 1.5rem;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -1000px;
+  left: 1rem;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+@media (min-width: 40em) {
+  /* TODO */
+}
+
+@media (min-width: 60em) {
+  /* TODO */
+}
+
+@media (min-width: 80em) {
+  /* TODO */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* TODO */
+  }
+}
+
+@media (prefers-contrast: more) {
+  /* TODO */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* TODO */
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  /* TODO */
+}
+
+@media (forced-colors: active) {
+  /* TODO */
+}
