@@ -3,8 +3,20 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
+  overflow-x: clip;
+  background: var(--bg);
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--accent);
 }
 
 h1 {
@@ -20,26 +32,69 @@ p {
   padding: 1.5rem;
 }
 
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
 
 img {
   max-width: 100%;
   height: auto;
 }
 
+#o-mne img {
+  max-width: 12rem;
+  width: 12rem;
+}
+
 :focus-visible {
-  outline: 3px solid #2563eb;
+  outline: 3px solid var(--accent);
   outline-offset: 3px;
 }
 
 .skip-link {
   position: absolute;
-  top: -1000px;
+  /*top: -1000px;
   left: 1rem;
-  z-index: 1000;
+  z-index: 1000;*/
+  top: 0;
+  left: 0;
+  padding: 0.5rem 1rem;
+  background: var(--surface);
+  color: var(--accent);
+  transform: translateY(-100%);
 }
 
 .skip-link:focus {
-  top: 1rem;
+  /*top: 1rem;*/
+  transform: translateY(0);
+}
+
+:root {
+  --bg: #ffffff;
+  --surface: #f4f6f8;
+  --text: #111827;
+  --muted: #4b5563;
+  --border: #d1d5db;
+  --accent: #2563eb;
+
+  color-scheme: light dark;
+}
+
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
 }
 
 @media (min-width: 40em) {
@@ -56,7 +111,12 @@ img {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* TODO */
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --border: #334155;
+    --accent: #60a5fa;
   }
 }
 
